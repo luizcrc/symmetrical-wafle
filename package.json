@@ -1,0 +1,55 @@
+{
+  "name": "jsreport-licensing",
+  "version": "2.0.1",
+  "description": "jsreport extension for enterprise license verification ",
+  "scripts": {
+    "start": "jsreport-studio-start --httpPort 4300",
+    "build": "jsreport-studio-build",
+    "prepublish": "in-publish && jsreport-studio-build || not-in-publish",
+    "test": "standard"
+  },
+  "homepage": "https://github.com/jsreport/jsreport-licensing",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jsreport/jsreport-licensing.git"
+  },
+  "keywords": [
+    "jsreport"
+  ],
+  "dependencies": {
+    "bluebird": "3.5.3",
+    "mkdirp": "0.5.1",
+    "request": "2.88.0"
+  },
+  "author": "Jan Blaha",
+  "standard": {
+    "ignore": [
+      "main.js",
+      "jsreport.config.js"
+    ],
+    "env": {
+      "node": true,
+      "mocha": true,
+      "browser": true
+    },
+    "parser": "babel-eslint"
+  },
+  "files": [
+    "lib",
+    "studio",
+    "index.js",
+    "jsreport.config.js"
+  ],
+  "engines": {
+    "node": ">=8.9"
+  },
+  "devDependencies": {
+    "babel-eslint": "8.2.2",
+    "eslint": "4.19.1",
+    "eslint-config-standard-jsx": "5.0.0",
+    "eslint-plugin-babel": "4.1.2",
+    "in-publish": "2.0.0",
+    "jsreport-studio-dev": "1.3.2",
+    "standard": "11.0.1"
+  }
+}
